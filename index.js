@@ -1,2 +1,11 @@
-// eslint-disable-next-line no-undef
-const express = require ('express');
+const express = require('express');
+const app = express();
+const port = 3000; 
+
+app.get('/', (req, res) => {
+  res.send('Hello, junior'); 
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
