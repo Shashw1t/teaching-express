@@ -5,6 +5,7 @@ const port = 3000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+// req,res => request and response
 // Route handler for GET request
 app.get('/', (req, res) => {
   res.send('GET request received');
