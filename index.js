@@ -2,46 +2,59 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware to parse JSON bodies
+const users = {
+    "user1": {
+        kidneys: 2,
+        condition: "normal"
+    },
+    "user2": {
+        kidneys: 1,
+        condition: "critical"
+    }
+};
+
+// Endpoint to GET user's kidney details            
+app.get('/user/:userID/kidneys', (req,res)=>{
+    const userID = req.params.userID;
+    const user = users[userID];
+
+    if(!user){
+        return res.status(404).json({error: "user not found"});
+    }
+
+    res.json({
+        kidneys: user.kidneys,
+        condition: user.condition
+    });
+});
+
+
 app.use(express.json());
+// Endpoint to add new kidneys for a user
+app.post('/user/:userId/kidneys', (req, res) => {
+    const userId = req.params.userId;
+    const { kidneys } = req.body;
 
-// req,res => request and response
-// Route handler for GET request
-app.get('/', (req, res) => {
-  res.send('GET request received');
+    if (typeof kidneys !== 'number' || kidneys <= 0) {
+        return res.status(400).json({ error: "Invalid kidneys value" });
+    }
+
+    if (!users[userId]) {
+        return res.status(404).json({ error: "User not found" });
+    }
+
+    users[userId].kidneys += kidneys;
+
+    res.json({ message: "Kidneys added successfully", newKidneysCount: users[userId].kidneys });
 });
 
-// Route handler for POST request
-app.post('/', (req, res) => {
-  res.send('POST request received');
-});
 
-// Route handler for PUT request
-app.put('/', (req, res) => {
-  res.send('PUT request received');
-});
 
-// Route handler for DELETE request
-app.delete('/', (req, res) => {
-  res.send('DELETE request received');
-});
 
-// Route handler for PATCH request
-app.patch('/', (req, res) => {
-  res.send('PATCH request received');
-});
 
-// Route handler for OPTIONS request
-app.options('/', (req, res) => {
-  res.send('OPTIONS request received');
-});
 
-// Route handler for HEAD request
-app.head('/', (req, res) => {
-  res.send('HEAD request received');
-});
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+
+app.listen(port, ()=>{
+    console.log(`app is listening on port 3000`);
 });
