@@ -2,8 +2,6 @@ const express = require('express');
 const zod = require('zod');
 const app = express();
 
-const schema = zod.array(zod.number());
-
 // {
     //  email: string => email
     // password: atleast 8 letters
@@ -33,5 +31,5 @@ app.post("/health-checkup", (req,res) =>{
         })
     }
 });
- 
+
 app.listen(3000);
