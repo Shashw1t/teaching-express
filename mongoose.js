@@ -6,8 +6,8 @@ app.use(express.json());
 
 mongoose.connect("mongodb+srv://iamsoranic:iamsoranic@cluster0.f3l3f3k.mongodb.net/userappnew")
 
-const User = mongoose.model('Users', { name : String, email:String, password:String });
-    
+const User = mongoose.model('Users', { name : String , email:String, password: String });
+
 app.post("/signup", async (req, res)  => {
     const username = req.body.username;
     const password = req.body.password;
