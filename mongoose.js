@@ -25,3 +25,12 @@ const user = new User({
     email:username,
     password:password
 });
+user.save();
+res.json({
+    msg: "user created successfully"
+})
+
+})
+
+
+app.listen(3000);
