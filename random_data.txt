@@ -6,5 +6,4 @@ Alex Williams,alexwilliams@example.com,p@ssw0rd
 Samantha Davis,samanthadavis@example.com,12345678
 David Lee,davidlee@example.com,davids_password
 Emma Taylor,emmataylor@example.com,ilovecoding
-James White,jameswhite@example.com,whitejamespass
-Sophia Garcia,sophiagarcia@example.com,sophia123
+
