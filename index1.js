@@ -10,7 +10,6 @@ function calculateRequests(req,res,next){
     console.log(numberOfRequest);
     next();
 }
-
 app.get("/health-checkup", (req,res) =>{
     const username = req.headers.username;
     const password = req.headers.password;
