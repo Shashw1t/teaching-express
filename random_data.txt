@@ -5,5 +5,5 @@ Emily Brown,emilybrown@example.com,letmein321
 Alex Williams,alexwilliams@example.com,p@ssw0rd
 Samantha Davis,samanthadavis@example.com,12345678
 David Lee,davidlee@example.com,davids_password
-Emma Taylor,emmataylor@example.com,ilovecoding
+
 
