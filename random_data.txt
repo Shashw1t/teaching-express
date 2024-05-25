@@ -6,4 +6,3 @@ Alex Williams,alexwilliams@example.com,p@ssw0rd
 Samantha Davis,samanthadavis@example.com,12345678
 David Lee,davidlee@example.com,davids_password
 
-
