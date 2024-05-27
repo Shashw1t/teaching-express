@@ -1,8 +1,9 @@
 John Doe,johndoe@example.com,pass123
 Jane Smith,janesmith@example.com,password456
-Michael Johnson,michaeljohnson@example.com,securepass789
+
 Emily Brown,emilybrown@example.com,letmein321
 Alex Williams,alexwilliams@example.com,p@ssw0rd
 Samantha Davis,samanthadavis@example.com,12345678
 David Lee,davidlee@example.com,davids_password
+
 
