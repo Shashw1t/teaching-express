@@ -12,7 +12,7 @@ public class Solution {
             PoisonTime = PoisonTime + Math.min(timeDifference, duration);
         }
         
-        // Add the duration for the 
+        // Add the duration for 
         PoisonTime = PoisonTime + duration;
         return PoisonTime;
         }
