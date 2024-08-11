@@ -1,4 +1,4 @@
-import javax.swing.text.Pos
+import javax.swing.text.Po
 
 public class Solution {
     public int findPoisonedDuration(int[] timeSeries, int duration) {
