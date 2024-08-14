@@ -1,4 +1,4 @@
-import javax.swing.text.Position
+import javax.swing.text.Positio
 
 public class Solution {
     public int findPoisonedDuration(int[] timeSeries, int duration) {
