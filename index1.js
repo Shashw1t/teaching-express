@@ -32,4 +32,3 @@ app.get("/health-checkup", (req,res) =>{
 });
 
 app.listen(3000);
-
